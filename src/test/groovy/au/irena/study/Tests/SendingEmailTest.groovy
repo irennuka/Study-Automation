@@ -1,13 +1,15 @@
 package au.irena.study.Tests
+
 import au.irena.study.Pages.*
 import org.testng.annotations.AfterMethod
 import org.testng.annotations.BeforeMethod
 import org.testng.annotations.Test
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.textToBePresentInElement
+
 /**
-*  Created by isierna on 3/17/2015.
-*/
+ *  Created by isierna on 3/17/2015.
+ */
 class SendingEmailTest extends AbstractTest {
     MailRuHomePage homePage
     MailRuInboxPage inboxPage
@@ -60,8 +62,7 @@ class SendingEmailTest extends AbstractTest {
 
         receivedLetterPage = new MailRuReceivedLetterPage()
         receivedLetterPage.at()
-        waitUntil(textToBePresentInElement(receivedLetterPage.letterBody,"Sandy"))
-        Thread.sleep(1000)
+        waitUntil(textToBePresentInElement(receivedLetterPage.letterBody, "Default message"))
     }
 }
 

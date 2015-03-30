@@ -26,7 +26,7 @@ class MailRuSentConfirmationPage extends AbstractPage {
 
     @Override
     public void at() {
-        waitUntil(textToBePresentInElement(sendEmailConfirmation, ""))
+        waitUntil(textToBePresentInElement(sendEmailConfirmation, "отправлено."))
     }
 
     public void saveTimeSent() {
